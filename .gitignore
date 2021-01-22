@@ -4,3 +4,7 @@ target/
 # Compiled files and logs
 *.class
 *.log
+
+# Intellij Files
+.idea/
+*.iml
