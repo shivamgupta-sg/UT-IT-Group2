@@ -1,2 +1,6 @@
+# Target Directory
+target/
+
+# Compiled files and logs
 *.class
 *.log
