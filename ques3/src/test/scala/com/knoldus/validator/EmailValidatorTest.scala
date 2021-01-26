@@ -17,7 +17,7 @@ class EmailValidatorTest extends AnyFlatSpec {
   it should "not be valid" in {
     val emailValidator = new EmailValidator()
 
-    val result = emailValidator.emailIdIsValid("xyz$98765#@example.com")
+    val result = emailValidator.emailIdIsValid("sony$123@sony.com")
 
     assert(!result)
   }
