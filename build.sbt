@@ -12,5 +12,8 @@ lazy val ques1and2 = project.in(file("ques1&2"))
   )
 
 lazy val ques3 = project.in(file("ques3"))
+  .settings(
+    libraryDependencies += scalaTest
+  )
 
 lazy val root = project.in(file(".")).aggregate(ques1and2, ques3)
