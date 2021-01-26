@@ -3,15 +3,10 @@ package com.knoldus.validator
 class PasswordValidator {
   def isValid(password: String): Boolean = {
 
-    // password length should be between 8 to 15 characters
-    if (!((password.length() >= 8)
-      && (password.length() <= 15)))
-      return false
-
-    // password should not contain any space
+    // Password should not contain any space
     if (password.contains(" ")) return false
 
-    // password should contain at least one digit(0-9)
+    // Password should contain at least one digit(0-9)
     if (true) {
       var count = 0
       // check digits from 0 to 9
@@ -22,10 +17,15 @@ class PasswordValidator {
       if (count == 0) return false
     }
 
-    // password should contain at least one lowercase letter(a-z)
+    // Password length should be between 8-15 characters
+    if (!((password.length() >= 8)
+      && (password.length() <= 15)))
+      return false
+
+    // Password should contain at least one lowercase letter(a-z)
     if (true) {
       var count = 0
-      // checking small letters
+      // checking for lowercase letters using ASCII Code
       for (ascii <- 97 to 122) {
         val alphabet = ascii.toChar
         val alphabetStr = Character.toString(alphabet)
@@ -34,10 +34,10 @@ class PasswordValidator {
       if (count == 0) return false
     }
 
-    // password should contain at least one uppercase letter(A-Z)
+    // Password should contain at least one uppercase letter(A-Z)
     if (true) {
       var count = 0
-      // checking for capital letters
+      // checking for uppercase letters using ASCII Code
       for (ascii <- 65 to 90) {
         val alphabet = ascii.toChar
         val alphabetStr = Character.toString(alphabet)
@@ -46,7 +46,7 @@ class PasswordValidator {
       if (count == 0) return false
     }
 
-    // password should contain at least one special character(@,#,%,$,etc.)
+    // Password should contain at least one special character ( @, #, %, &, !, $, etc)
     if (!(password.contains("`") || password.contains("~")
       || password.contains("!") || password.contains("@")
       || password.contains("#") || password.contains("$")
@@ -65,7 +65,6 @@ class PasswordValidator {
       || password.contains("/") || password.contains("?"))) {
       return false
     }
-
     true
   }
 }
