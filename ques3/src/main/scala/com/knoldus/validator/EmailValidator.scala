@@ -2,7 +2,7 @@ package com.knoldus.validator
 
 class EmailValidator {
   def emailIdIsValid(emailId: String): Boolean = {
-    val emailIdRegex = "/[\w._%+-]+@[\w.-]+\.[a-zA-Z]{2,4}"
+    val emailIdRegex: String = "^(?=.{1,64}@)[A-Za-z0-9_-]+(\\.[A-Za-z0-9_-]+)*@[^-][A-Za-z0-9-]+(\\.[A-Za-z0-9-]+)*(\\.[A-Za-z]{2,})$"
 
     if (!emailId.matches(emailIdRegex))
       return false
