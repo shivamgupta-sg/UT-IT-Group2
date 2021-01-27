@@ -3,6 +3,7 @@ package com.knoldus.validator
 import org.scalatest.flatspec.AnyFlatSpec
 
 class PasswordValidatorTest extends AnyFlatSpec {
+
   "Password" should "be valid" in {
     val passwordValidator = new PasswordValidator()
 
@@ -59,4 +60,5 @@ class PasswordValidatorTest extends AnyFlatSpec {
     val result = passwordValidator.isValid("abcd @1234A")
     assert(!result)
   }
+
 }

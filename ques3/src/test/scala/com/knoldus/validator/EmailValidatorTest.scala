@@ -4,9 +4,7 @@ import org.scalatest.flatspec.AnyFlatSpec
 
 class EmailValidatorTest extends AnyFlatSpec {
 
-  behavior of "EmailValidatorTest"
-
-  it should "be valid" in {
+  "Email" should "be valid" in {
     val emailValidator = new EmailValidator()
 
     val result = emailValidator.emailIdIsValid("abc.123@example.com")

@@ -5,9 +5,7 @@ import org.scalatest.flatspec.AnyFlatSpec
 
 class CompanyValidatorTest extends AnyFlatSpec {
 
-  behavior of "CompanyValidatorTest"
-
-  it should "be valid" in {
+  "Company" should "be valid" in {
     val companyValidator = new CompanyValidator()
 
     val userInputComapny: Company = Company("Sony",

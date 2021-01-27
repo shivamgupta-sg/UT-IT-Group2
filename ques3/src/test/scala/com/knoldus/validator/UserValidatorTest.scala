@@ -5,9 +5,7 @@ import org.scalatest.flatspec.AnyFlatSpec
 
 class UserValidatorTest extends AnyFlatSpec {
 
-  behavior of "UserValidatorTest"
-
-  it should "be valid as company exists and email is valid" in {
+  "User" should "be valid as company exists and email is valid" in {
     val userValidator = new UserValidator()
 
     val userInputUser: User = User("Shivam",
