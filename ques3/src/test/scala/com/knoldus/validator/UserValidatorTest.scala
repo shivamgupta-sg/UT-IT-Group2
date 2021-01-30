@@ -8,11 +8,11 @@ class UserValidatorTest extends AnyFlatSpec {
   "User" should "be valid as company exists and email is valid" in {
     val userValidator = new UserValidator()
 
-    val userInputUser: User = User("Shivam",
+    val testUser: User = User("Shivam",
       "shivam@knoldus.com",
       "Knoldus")
 
-    val result = userValidator.isValid(userInputUser)
+    val result = userValidator.isValid(testUser)
 
     assert(result)
   }
@@ -20,11 +20,11 @@ class UserValidatorTest extends AnyFlatSpec {
   it should "not be valid as email is not valid" in {
     val userValidator = new UserValidator()
 
-    val userInputUser: User = User("Shivam",
+    val testUser: User = User("Shivam",
       "shivam$123@sony.com",
       "Philips")
 
-    val result = userValidator.isValid(userInputUser)
+    val result = userValidator.isValid(testUser)
 
     assert(!result)
   }
@@ -32,11 +32,11 @@ class UserValidatorTest extends AnyFlatSpec {
   it should "not be valid as company doesn't exists" in {
     val userValidator = new UserValidator()
 
-    val userInputUser: User = User("Shivam",
+    val testUser: User = User("Shivam",
       "shivam.123@sony.com",
       "Sony")
 
-    val result = userValidator.isValid(userInputUser)
+    val result = userValidator.isValid(testUser)
 
     assert(!result)
   }
@@ -44,11 +44,11 @@ class UserValidatorTest extends AnyFlatSpec {
   it should "not be valid as email is not valid and company doesn't exists" in {
     val userValidator = new UserValidator()
 
-    val userInputUser: User = User("Shivam",
+    val testUser: User = User("Shivam",
       "shivam$123@sony.com",
       "Sony")
 
-    val result = userValidator.isValid(userInputUser)
+    val result = userValidator.isValid(testUser)
 
     assert(!result)
   }

@@ -8,11 +8,11 @@ class CompanyValidatorTest extends AnyFlatSpec {
   "Company" should "be valid" in {
     val companyValidator = new CompanyValidator()
 
-    val userInputComapny: Company = Company("Sony",
+    val testComapny: Company = Company("Sony",
       "sony@sony.com",
       "Noida")
 
-    val result = companyValidator.companyIsValid(userInputComapny)
+    val result = companyValidator.companyIsValid(testComapny)
 
     assert(result)
   }
@@ -20,11 +20,11 @@ class CompanyValidatorTest extends AnyFlatSpec {
   it should "not be valid as email is not valid" in {
     val companyValidator = new CompanyValidator()
 
-    val userInputComapny: Company = Company("Sony",
+    val testComapny: Company = Company("Sony",
       "sony$123@sony.com",
       "Noida")
 
-    val result = companyValidator.companyIsValid(userInputComapny)
+    val result = companyValidator.companyIsValid(testComapny)
 
     assert(!result)
   }
@@ -32,11 +32,11 @@ class CompanyValidatorTest extends AnyFlatSpec {
   it should "not be valid as company exists" in {
     val companyValidator = new CompanyValidator()
 
-    val userInputComapny: Company = Company("Philips",
+    val testComapny: Company = Company("Philips",
       "phil.123@philips.com",
       "Noida")
 
-    val result = companyValidator.companyIsValid(userInputComapny)
+    val result = companyValidator.companyIsValid(testComapny)
 
     assert(!result)
   }
@@ -44,11 +44,11 @@ class CompanyValidatorTest extends AnyFlatSpec {
   it should "not be valid as email is not valid and company exists" in {
     val companyValidator = new CompanyValidator()
 
-    val userInputComapny: Company = Company("Philips",
+    val testComapny: Company = Company("Philips",
       "phil$123@philips.com",
       "Noida")
 
-    val result = companyValidator.companyIsValid(userInputComapny)
+    val result = companyValidator.companyIsValid(testComapny)
 
     assert(!result)
   }

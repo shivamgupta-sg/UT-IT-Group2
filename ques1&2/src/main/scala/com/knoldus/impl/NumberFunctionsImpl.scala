@@ -24,4 +24,5 @@ class NumberFunctionsImpl extends NumberFunctions {
     }
     factorial
   }
+
 }
