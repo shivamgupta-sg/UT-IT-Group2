@@ -10,6 +10,7 @@ class UserImplTest extends AnyFlatSpec {
   behavior of "UserImplTest"
 
   it should "create user" in {
+
     val testUser: User = User("Shivam",
       "shivam@knoldus.com",
       "Knoldus")
@@ -22,9 +23,11 @@ class UserImplTest extends AnyFlatSpec {
     val result = userImplTest.createUser(testUser)
 
     assert(result == Option(testUser.emailId))
+
   }
 
   it should "not create user" in {
+
     val testUser: User = User("Shivam",
       "shivam$123@sony.com",
       "Sony")
@@ -37,5 +40,7 @@ class UserImplTest extends AnyFlatSpec {
     val result = userImplTest.createUser(testUser)
 
     assert(result.isEmpty)
+
   }
+
 }

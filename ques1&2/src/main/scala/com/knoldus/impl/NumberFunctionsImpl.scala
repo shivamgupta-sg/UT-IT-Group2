@@ -6,8 +6,8 @@ class NumberFunctionsImpl extends NumberFunctions {
 
   /* checking if number is palindrome by checking first digit with last, second with second last and so on */
   override def isPalindrome(inputNumber: Int): Boolean = {
-    val inputNumberToStr = inputNumber.toString
-    val lenOfNumberStr = inputNumberToStr.length
+    val inputNumberToStr:String = inputNumber.toString
+    val lenOfNumberStr:Int = inputNumberToStr.length
 
     for (counter <- 0 until lenOfNumberStr / 2) {
       if (inputNumberToStr(counter) != inputNumberToStr(lenOfNumberStr - counter - 1))
@@ -18,7 +18,7 @@ class NumberFunctionsImpl extends NumberFunctions {
 
   /* calculate factorial multiply number from 1 to input number */
   override def factorial(inputNumber: Int): Int = {
-    var factorial = 1
+    var factorial:Int = 1
     for (number <- 1 to inputNumber) {
       factorial = factorial * number
     }

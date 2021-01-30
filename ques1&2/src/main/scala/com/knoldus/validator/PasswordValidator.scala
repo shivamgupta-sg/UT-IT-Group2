@@ -8,7 +8,7 @@ class PasswordValidator {
 
     // Password should contain at least one digit(0-9)
     if (true) {
-      var count = 0
+      var count:Int = 0
       // check digits from 0 to 9
       for (number <- 0 to 9) { // to convert int to string
         val digit = Integer.toString(number)
@@ -24,7 +24,7 @@ class PasswordValidator {
 
     // Password should contain at least one lowercase letter(a-z)
     if (true) {
-      var count = 0
+      var count:Int = 0
       // checking for lowercase letters using ASCII Code
       for (ascii <- 97 to 122) {
         val alphabet = ascii.toChar
@@ -36,7 +36,7 @@ class PasswordValidator {
 
     // Password should contain at least one uppercase letter(A-Z)
     if (true) {
-      var count = 0
+      var count:Int = 0
       // checking for uppercase letters using ASCII Code
       for (ascii <- 65 to 90) {
         val alphabet = ascii.toChar

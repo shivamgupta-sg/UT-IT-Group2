@@ -8,6 +8,7 @@ import org.scalatest.flatspec.AnyFlatSpec
 class CompanyImplTest extends AnyFlatSpec {
 
   "CompanyImplTest" should "create company" in {
+
     val testCompany: Company = Company("Sony",
       "sony@sony.com",
       "Noida")
@@ -20,9 +21,11 @@ class CompanyImplTest extends AnyFlatSpec {
     val result = companyImplTest.createCompany(testCompany)
 
     assert(result == Option(testCompany.name))
+
   }
 
   it should "not create company" in {
+
     val testCompany: Company = Company("Sony",
       "sony$123@sony.com",
       "Noida")
@@ -35,6 +38,7 @@ class CompanyImplTest extends AnyFlatSpec {
     val result = companyImplTest.createCompany(testCompany)
 
     assert(result.isEmpty)
+
   }
 
 }

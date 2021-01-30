@@ -6,6 +6,7 @@ import org.scalatest.flatspec.AnyFlatSpec
 class CompanyValidatorTest extends AnyFlatSpec {
 
   "Company" should "be valid" in {
+
     val companyValidator = new CompanyValidator()
 
     val testComapny: Company = Company("Sony",
@@ -15,9 +16,11 @@ class CompanyValidatorTest extends AnyFlatSpec {
     val result = companyValidator.companyIsValid(testComapny)
 
     assert(result)
+
   }
 
   it should "not be valid as email is not valid" in {
+
     val companyValidator = new CompanyValidator()
 
     val testComapny: Company = Company("Sony",
@@ -27,9 +30,11 @@ class CompanyValidatorTest extends AnyFlatSpec {
     val result = companyValidator.companyIsValid(testComapny)
 
     assert(!result)
+
   }
 
   it should "not be valid as company exists" in {
+
     val companyValidator = new CompanyValidator()
 
     val testComapny: Company = Company("Philips",
@@ -39,9 +44,11 @@ class CompanyValidatorTest extends AnyFlatSpec {
     val result = companyValidator.companyIsValid(testComapny)
 
     assert(!result)
+
   }
 
   it should "not be valid as email is not valid and company exists" in {
+
     val companyValidator = new CompanyValidator()
 
     val testComapny: Company = Company("Philips",
@@ -51,6 +58,7 @@ class CompanyValidatorTest extends AnyFlatSpec {
     val result = companyValidator.companyIsValid(testComapny)
 
     assert(!result)
+
   }
 
 }
