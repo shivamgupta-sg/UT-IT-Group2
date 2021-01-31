@@ -9,8 +9,8 @@ class NumberFunctionsImpl extends NumberFunctions {
     val inputNumberToStr:String = inputNumber.toString
     val lenOfNumberStr:Int = inputNumberToStr.length
 
-    for (counter <- 0 until lenOfNumberStr / 2) {
-      if (inputNumberToStr(counter) != inputNumberToStr(lenOfNumberStr - counter - 1))
+    for (counterForNumberStr <- 0 until lenOfNumberStr / 2) {
+      if (inputNumberToStr(counterForNumberStr) != inputNumberToStr(lenOfNumberStr - counterForNumberStr - 1))
         return false
     }
     true
