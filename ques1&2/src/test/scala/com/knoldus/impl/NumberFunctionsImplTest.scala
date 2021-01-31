@@ -4,11 +4,11 @@ import org.scalatest.flatspec.AnyFlatSpec
 
 class NumberFunctionsImplTest extends AnyFlatSpec {
 
-  val numberFunctionsImpl:NumberFunctionsImpl = new NumberFunctionsImpl()
+  val numberFunctionsImpl: NumberFunctionsImpl = new NumberFunctionsImpl()
 
   "Number" should "isPalindrome" in {
 
-    val result:Boolean = numberFunctionsImpl.isPalindrome(12321)
+    val result: Boolean = numberFunctionsImpl.isPalindrome(12321)
 
     assert(result)
 
@@ -16,7 +16,7 @@ class NumberFunctionsImplTest extends AnyFlatSpec {
 
   it should "is not palindrome" in {
 
-    val result:Boolean = numberFunctionsImpl.isPalindrome(1321)
+    val result: Boolean = numberFunctionsImpl.isPalindrome(1321)
 
     assert(!result)
 
@@ -24,7 +24,7 @@ class NumberFunctionsImplTest extends AnyFlatSpec {
 
   it should "factorial" in {
 
-    val result:Int = numberFunctionsImpl.factorial(5)
+    val result: Int = numberFunctionsImpl.factorial(5)
 
     assert(result == 120)
 
